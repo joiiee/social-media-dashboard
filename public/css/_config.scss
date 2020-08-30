@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin dark-bg($dark: true) {
+    @if $dark {
+        background: set-color(dark-bg);
+    } @else {
+        background: set-color(light-bg);
+    }
+}
+
+@mixin dark-top-bg($dark-top: true) {
+    @if $dark-top {
+        background: set-color(dark-top-bg);
+    } @else {
+        background: set-color(light-top-bg);
+    }
+}
+
+@mixin dark-card-bg($dark-card: true) {
+    @if $dark-card {
+        background: set-color(dark-card-bg);
+    } @else {
+        background: set-color(light-card-bg);
+    }
+}
+
+@mixin transition($elem) {
+    transition: $elem 0.5s ease;
+}
+
+@mixin card-setting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 5px;
+    width: 86%;
+    height: 220px;
+    
+    @include transition(all);
+    @include dark-card-bg($dark-card: false);
+}
+
+@mixin flexCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin desktop-md {
+    @media (min-width: 768px) and (max-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin desktop-lg {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}

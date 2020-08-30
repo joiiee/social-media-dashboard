@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import './colors';
+@import './config';
+@import './header';
+@import './first-section';
+@import './second-section';
+
+body {
+    @include dark-bg($dark: false);
+    @include transition(all);
+
+    font-family: 'Inter', sans-serif;
+
+    &.dark-bg {
+        @include dark-bg($dark: true);
+    }
+}
+
+.attribution { 
+    padding: 4em 4em 2em 4em;
+    font-size: 8px; text-align: center; 
+    text-transform: uppercase;
+    color: rgb(53, 173, 167);
+
+    & a { 
+        text-decoration: none;
+        color: rgb(43, 134, 161); 
+        
+        &:hover {
+            color: rgb(56, 158, 189); 
+        }
+    }
+}

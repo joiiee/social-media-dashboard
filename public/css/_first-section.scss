@@ -1,0 +1,174 @@
+section.account-stats {
+    @include flexCenter;
+
+    @include desktop-md {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        position: relative;
+        top: -48px;
+    }
+    
+    @include desktop-lg {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        grid-column-gap: initial;
+        padding-left: 9em;
+        padding-right: 9em;
+    }
+
+    
+    .card-fb {
+        border-top: 4px solid set-color(fb);
+        position: relative;
+        top: -46px;
+        
+        @include desktop-md {
+            position: initial;
+            top: unset;
+        }
+
+        @include desktop-lg {
+            top: -112px;
+        }
+
+    }
+    
+    .card-tw {
+        border-top: 4px solid set-color(tw);
+        margin-top: -1.6em;
+
+        @include desktop-md {
+            margin-top: unset;
+        }
+
+        @include desktop-lg {
+            margin-top: -16em;
+        }
+    }
+    
+    .card-ig {
+        position: relative;
+        margin-top: 1.6em;
+
+        @include desktop-md {
+            margin-top: unset;
+        }
+
+        @include desktop-lg {
+            margin-top: -16em;
+        }
+    }
+
+    .card-ig:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        height: 4px;
+        width: 100%;
+        background: set-color(ig);
+    }
+
+    .card-yt {
+        border-top: 4px solid set-color(yt);
+        margin-top: 1.6em;
+
+        @include desktop-md {
+            margin-top: unset;
+        }
+
+        @include desktop-lg {
+            margin-top: -16em;
+        }
+    }
+
+    .card {
+        @include card-setting;
+
+        @include desktop-md {
+            width: 20em;
+            margin-bottom: 1.6em;
+        }
+
+        &:hover {
+            background: darken(set-color(light-card-bg), 4%);
+        }
+        
+        &.dark-card-bg {
+            @include dark-card-bg($dark-card: true);
+
+            &:hover {
+                background: lighten(set-color(dark-card-bg), 8%);
+            }
+
+            & .social-account h5 {
+                color: set-color(dark-blue-text);
+            }
+
+            & .counter {
+                .count {
+                    color: set-color(dark-white-text);
+                }
+                
+                .followers {
+                    color: set-color(dark-blue-text);
+                }
+            }
+        }
+
+        .social-account {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 0.6em;
+
+            h5 {
+                color: set-color(secondary-color);
+                align-self: center;
+            }
+        }
+
+        .counter {
+            .count {
+                font-size: 4em;
+                font-weight: 700;
+                color: set-color(primary-color);
+            }
+
+            .followers {
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                color: set-color(secondary-color);
+            }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 0.38em;
+            
+            span:first-child {
+                display: grid;
+                align-self: center;
+            }
+
+            h5 {
+                font-weight: 700;
+            }
+
+            &.stats-up {
+                h5 {
+                    color: stat-color(up);
+                }
+            }
+
+            &.stats-down {
+                h5 {
+                    color: stat-color(down);
+                }
+            }
+        }
+    }
+}

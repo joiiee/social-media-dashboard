@@ -1,0 +1,132 @@
+section.overview-today {
+    margin-top: 1.6em;
+
+    @include desktop-lg {
+        margin-top: -7em;
+        padding-left: 9em;
+        padding-right: 9em;
+    }
+
+    .overview-title {
+        margin: 3.2em 1.6em 1.4em 1.6em;
+
+        @include desktop-md {
+            margin-left: 3em;
+            margin-right: 3em;
+        }
+    
+
+        @include desktop-lg {
+            margin-left: 1em;
+        }
+
+        h2 {
+            color: set-color(secondary-color);
+        }
+
+        &.dark-theme h2 {
+            color: set-color(dark-white-text);
+        }
+    }
+    
+    .overview-cards {
+        @include flexCenter;
+
+        @include desktop-md {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        @include desktop-lg {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-items: center;
+        }
+    }
+
+    .overview-card {
+        @include card-setting;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 128px;
+        padding-left: 1.6em;
+        padding-right: 1.6em;
+        margin-bottom: 1.2em;
+
+        @include desktop-md {
+            width: 20em;
+        }
+
+        &:hover {
+            background: darken(set-color(light-card-bg), 4%);
+        }
+
+        &.dark-card-bg {
+            @include dark-card-bg($dark-card: true);
+
+            &:hover {
+                background: lighten(set-color(dark-card-bg), 8%);
+            }
+
+            .overview-left {
+                .title-count {
+                    color: set-color(dark-blue-text);
+                }
+    
+                .stats-count {
+                    color: set-color(dark-white-text);
+                }
+            }
+        }
+
+        .overview-left {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-gap: 1.8em;
+            justify-items: flex-start;
+
+            .title-count {
+                font-weight: 700;
+                color: set-color(secondary-color);
+            }
+
+            .stats-count {
+                font-weight: 700;
+                font-size: 2.2em;
+                color: set-color(primary-color);
+            }
+        }
+
+        .overview-right {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-gap: 2.8em;
+            justify-items: flex-end;
+
+            .overview-stats {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-gap: 0.2em;
+                
+                span {
+                    display: grid;
+                    align-self: center;
+                }
+
+            }
+
+            .stats-up {
+                h5 {
+                    color: stat-color(up);
+                }
+            }
+
+            .stats-down {
+                h5 {
+                    color: stat-color(down);
+                }
+            }
+        }
+    }
+}
