@@ -22,7 +22,7 @@ header {
   background: #f5f7ff;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   header {
     padding-left: 3em;
     padding-right: 3em;
@@ -198,7 +198,7 @@ section.account-stats {
           align-items: center;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.account-stats {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -233,7 +233,7 @@ section.account-stats .card-fb {
   top: -46px;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.account-stats .card-fb {
     position: initial;
     top: unset;
@@ -251,7 +251,7 @@ section.account-stats .card-tw {
   margin-top: -1.6em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.account-stats .card-tw {
     margin-top: unset;
   }
@@ -268,7 +268,7 @@ section.account-stats .card-ig {
   margin-top: 1.6em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.account-stats .card-ig {
     margin-top: unset;
   }
@@ -297,7 +297,7 @@ section.account-stats .card-yt {
   margin-top: 1.6em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.account-stats .card-yt {
     margin-top: unset;
   }
@@ -334,7 +334,7 @@ section.account-stats .card {
   background: #f0f2fa;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.account-stats .card {
     width: 20em;
     margin-bottom: 1.6em;
@@ -435,7 +435,7 @@ section.overview-today .overview-title {
   margin: 3.2em 1.6em 1.4em 1.6em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.overview-today .overview-title {
     margin-left: 3em;
     margin-right: 3em;
@@ -472,7 +472,7 @@ section.overview-today .overview-cards {
           align-items: center;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.overview-today .overview-cards {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -530,7 +530,7 @@ section.overview-today .overview-card {
   margin-bottom: 1.2em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1439px) {
   section.overview-today .overview-card {
     width: 20em;
   }
